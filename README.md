@@ -1,35 +1,35 @@
 # 📊 Customer Churn Segmentation & Retention
 
 An end-to-end **Customer Churn Segmentation & Retention** project focused on analyzing customer attrition patterns and identifying key churn drivers.  
-This project helps stakeholders monitor churn behavior, evaluate retention performance, and design targeted intervention strategies.
+This project helps stakeholders monitor churn behavior, evaluate retention performance, and support targeted retention planning.
 
 ---
 
 ## 📌 Problem Statement
 
-Organizations often struggle with customer retention due to changing behavior patterns, service expectations, and competitive pressure.  
-This project analyzes customer demographics, engagement behavior, tenure, and financial attributes to identify churn risks and support data-driven retention strategies.
+Organizations often struggle with customer retention due to changing behavior patterns and engagement levels.  
+This project analyzes customer demographics, geography, tenure, and account attributes to identify churn patterns and support data-driven retention strategies.
 
 ---
 
 ## 🛠 Tools & Technologies
 
 - **SQL** — Data extraction and segmentation  
-- **Power BI** — Data modeling and analysis  
+- **Power BI** — Data modeling and dashboard development  
 - **DAX** — KPI and churn calculations  
 - **Power Query (M)** — Data cleaning and transformation  
-- **Excel** — Data validation and quick analysis  
+- **Excel** — Data validation and exploratory checks  
 
 ---
 
 ## 📂 Project Overview
 
-The analysis evaluates churn behavior using key customer and behavioral dimensions:
+The analysis evaluates churn behavior across key customer dimensions:
 
 - Total vs Active vs Inactive Customers  
 - Monthly churn and retention trends  
 - Customer distribution by geography, gender, and tenure  
-- Impact of balance, tenure, and engagement on churn  
+- Impact of balance and tenure on churn  
 - Segment-level churn risk identification  
 
 ---
@@ -37,7 +37,7 @@ The analysis evaluates churn behavior using key customer and behavioral dimensio
 ## 📊 Data Scope
 
 - **30K+ customers analyzed**  
-- Multi-dimensional segmentation across demographics and behavior  
+- Multi-dimensional segmentation across demographics and account attributes  
 - Identified high-risk segments with **>20% churn rate**  
 - Supported retention strategies improving retention by **~12%**
 
@@ -54,18 +54,19 @@ The analysis evaluates churn behavior using key customer and behavioral dimensio
 ### KPI Overview
 ![KPI Overview](https://github.com/user-attachments/assets/7b9b9155-fa2a-422d-90ff-606dafc87e95)
 
+---
+
 ## 🔍 Key Insights
 
-- Higher churn observed among **inactive customers**  
-- Customers with shorter tenure showed higher churn probability  
-- Regional variation suggested operational and engagement differences  
-- Behavioral indicators strongly correlated with churn outcomes  
+- Higher churn observed among inactive customers  
+- Customers with shorter tenure showed higher churn  
+- Regional variation highlighted engagement differences  
+- Behavioral patterns differed between churned and retained customers  
 
 ---
 
 ## 📈 Analysis Techniques Used
 
-- Cohort-style behavioral analysis  
 - Customer segmentation using SQL logic  
 - Trend and variance analysis  
 - Risk-based customer profiling  
@@ -96,13 +97,7 @@ FROM CustomerData
 WHERE Exited = 1
 GROUP BY Geography
 ORDER BY churned_customers DESC;
-```
 
----
-
-## 🧮 Sample DAX Measures
-
-```dax
 Exit Customers =
 CALCULATE(
     COUNTROWS(CustomerData),
@@ -119,20 +114,9 @@ Churn Rate (%) =
 DIVIDE([Exit Customers], [Total Customers]) * 100
 ```
 
----
-
-## ⚙️ Features
-
-- Interactive filters and slicers  
-- Drill-down capability for granular insights  
-- Executive-ready layout  
-- Scalable KPI framework using DAX  
-
----
-
-## 📂 Repository Structure
-
 ```
+
+
 customer-churn-segmentation-retention/
 │
 ├── customer-churn-analysis.pbix
@@ -142,13 +126,16 @@ customer-churn-segmentation-retention/
 └── README.md
 ```
 
----
+👤 Author
 
-## 👤 Author
+Avinash Dubey — Data Analyst (≈3 YOE)
 
-**Avinash Dubey — Data Analyst (≈3 YOE)**  
+📧 dubeyavinash157@gmail.com
 
-📧 dubeyavinash157@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/avinash7007/  
-🌐 Portfolio: https://avinash7007.github.io/avinash-portfolio/  
-🐙 GitHub: https://github.com/Avinash7007
+🔗 https://www.linkedin.com/in/avinash7007/
+
+🌐 https://avinash7007.github.io/avinash-portfolio/
+
+🐙 https://github.com/Avinash7007
+
+```
